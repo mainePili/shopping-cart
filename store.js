@@ -1,16 +1,6 @@
 /**
- * Created by maine on 14/03/2020.
+ * Created by maine on 13/03/2020.
  */
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
-
-function ready() {
-    console.log("Shopping")
-}
-
 var promoCodeVal = false
 var totalAmount = 0
 var cart = new ShoppingCart([firstRule, secondRule, thirdRule, fourthRule])
