@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amaysim Shopping Cart</title>
+    <meta name="description" content="Amaysim Shopping Cart">
+    <link rel="stylesheet" href="style.css" />
+    <script src="shoppingCart.js"></script>
+    <script src="store.js" async></script>
+</head>
+<body>
+<header class="main-header">
+    <h1 class="band-name">Amaysim Shopping Cart</h1>
+</header>
+<section id="shop" class="container content-section">
+    <h2 class="section-header">SIM Cards</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title">Unlimited 1GB</span>
+            <span class="shop-item-currency">$</span>
+            <span class="shop-item-price">24.90</span>
+            <button onclick="addToCart('ult_small')" class="btn btn-primary shop-item-button"
+                    type="button">ADD TO CART</button>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Unlimited 2GB</span>
+            <span class="shop-item-currency">$</span>
+            <span class="shop-item-price">29.90</span>
+            <button onclick="addToCart('ult_medium')" class="btn btn-primary shop-item-button"
+                    type="button">ADD TO CART</button>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Unlimited 5GB</span>
+            <span class="shop-item-code">ult_large</span>
+            <span class="shop-item-currency">$</span>
+            <span class="shop-item-price">44.90</span>
+            <button onclick="addToCart('ult_large')" class="btn btn-primary shop-item-button"
+                    type="button">ADD TO CART</button>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">1 GB Data-pack</span>
+            <span class="shop-item-code">1gb</span>
+            <span class="shop-item-currency">$</span>
+            <span class="shop-item-price">9.90</span>
+            <button onclick="addToCart('1gb')" class="btn btn-primary shop-item-button"
+                    type="button">ADD TO CART</button>
+        </div>
+    </div>
+</section>
+<section id="cart" style="display: none" class="container content-section">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-promo">
+        <strong class="cart-promo-title">Promo Code</strong>
+        <input id="promoCode" class="shop-promo-input">
+        <button id="btnPromoCode" onclick="applyPromo(document.getElementById('promoCode').value)"
+                class="btn btn-primary shop-item-button" type="button">APPLY</button>
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price"></span>
+    </div>
+</section>
+</body>
+</html>
